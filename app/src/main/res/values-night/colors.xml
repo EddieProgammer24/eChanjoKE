@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="colorBackgroundFragment">@android:color/transparent</color>
+    <color name="colorBackgroundButton">@android:color/transparent</color>
+    <color name="defaultLabelColor">#FFFFFF</color>
+
+
+
+    <color name="surface">#000000</color>
+
+</resources>

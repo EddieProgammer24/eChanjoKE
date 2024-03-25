@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddChildDetails"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Add Child Details"
+            android:textColor="#2CA7E0"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/uploadCertNo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="195dp"
+            android:background="@drawable/edit"
+            android:drawablePadding="10dp"
+            android:hint="Birth Certificate Number"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0" />
+
+        <EditText
+            android:id="@+id/uploadFullName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edit"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="10dp"
+            android:hint="Enter Child's FullName"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0" />
+
+        <EditText
+            android:id="@+id/uploadDoB"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edit"
+            android:drawablePadding="10dp"
+            android:hint="Select Child's Date of birth"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0" />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:id="@+id/RL_gender"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit"
+            >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/imageViewGender"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textColor="#2CA7E0"
+                android:drawablePadding="10dp"
+                android:id="@+id/textView_register_gender"
+                android:text="Select Your Gender"
+                android:padding="10dp"
+                android:layout_toEndOf="@id/imageViewGender"
+                />
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toEndOf="@id/imageViewGender"
+                android:layout_below="@id/textView_register_gender"
+                android:id="@+id/uploadGender">
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textColor="#2CA7E0"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Male"
+                    android:textColor="#2CA7E0"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/uploadFathersName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edit"
+            android:drawablePadding="10dp"
+            android:hint="Child's Father's Name"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0" />
+
+        <EditText
+            android:id="@+id/uploadMothersName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edit"
+            android:drawablePadding="10dp"
+            android:hint="Child's Mother's Name"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0" />
+
+        <EditText
+            android:id="@+id/uploadAddress"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edit"
+            android:drawablePadding="10dp"
+            android:hint="Enter Child's Address"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0" />
+
+        <EditText
+            android:id="@+id/uploadContactInfo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edit"
+            android:drawablePadding="10dp"
+            android:hint="Enter Contact Information"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0" />
+
+        <EditText
+            android:id="@+id/uploadWeight"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edit"
+            android:drawablePadding="10dp"
+            android:hint="Enter Child's Weight(Kg)"
+            android:inputType="number"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="#fff" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleLarge"
+            android:id="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

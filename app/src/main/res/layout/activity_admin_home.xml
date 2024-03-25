@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homeadminbackground"
+    android:orientation="vertical"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="left">
+
+        <TextView
+            android:id="@+id/doctorNameShow"
+            android:layout_width="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="50dp"
+            android:fontFamily="@font/allerta"
+            android:text="Home"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/adminLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorTransparent"
+            android:paddingTop="5dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/logout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/adddocButton"
+            android:background="@drawable/shape_homebuttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:src="@drawable/adddoctorbutton" />
+
+        <ImageButton
+            android:id="@+id/removedocButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_homebuttons"
+            android:elevation="2dp"
+            android:src="@drawable/removedoctorbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/historyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_homebuttons"
+            android:elevation="2dp"
+            android:src="@drawable/appointhistorybutton" />
+
+        <ImageButton
+            android:id="@+id/adminreviewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_homebuttons"
+            android:elevation="2dp"
+            android:src="@drawable/reviewbutton" />
+    </LinearLayout>
+
+</LinearLayout>

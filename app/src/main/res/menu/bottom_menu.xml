@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/bottom_vaccine"
+        android:icon="@drawable/baseline_vaccines_24"
+        android:title="Vaccines" />
+
+    <item
+        android:id="@+id/bottom_reminders"
+        android:icon="@drawable/baseline_access_alarms_24"
+        android:title="Reminders" />
+
+</menu>

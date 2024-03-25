@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "280583139629",
+    "project_id": "echanjoke",
+    "storage_bucket": "echanjoke.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280583139629:android:4f73109286c2eff8b723a4",
+        "android_client_info": {
+          "package_name": "com.example.eChanjoKE"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbvvu2w6ddg60lJrm3AHNw8K5iRPNxapE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

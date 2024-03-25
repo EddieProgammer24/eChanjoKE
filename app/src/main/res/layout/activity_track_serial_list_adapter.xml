@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorCard1">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:weightSum="6"
+            android:gravity="start">
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:id="@+id/trackSerialNo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/allerta"
+                android:gravity="center"
+                android:paddingVertical="5dp"
+                android:paddingEnd="15dp"
+                android:text="Sr." />
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:id="@+id/trackSerialName"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/allerta"
+                android:gravity="start"
+                android:paddingVertical="5dp"
+                android:text="P Name" />
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:id="@+id/trackSerialTime"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/allerta"
+                android:gravity="center"
+                android:paddingVertical="5dp"
+                android:paddingStart="15dp"
+                android:text="Time" />
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:id="@+id/trackSerialDoctor"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/allerta"
+                android:gravity="center"
+                android:paddingVertical="5dp"
+                android:text="Doctor" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_second"
+            android:icon="@drawable/baseline_app_registration_24"
+            android:title="Register" />
+
+        <item
+            android:id="@+id/nav_third"
+            android:icon="@drawable/baseline_login_24"
+            android:title="Login" />
+        <item
+            android:id="@+id/nav_fourth"
+            android:icon="@drawable/baseline_medication_liquid_24"
+            android:title="Vaccine" />
+        <item
+            android:id="@+id/nav_five"
+            android:icon="@drawable/baseline_help_24"
+            android:title="Help" />
+    </group>
+</menu>
