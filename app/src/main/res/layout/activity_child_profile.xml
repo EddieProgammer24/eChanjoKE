@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/showProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/allerta"
+        android:padding="10dp"
+        android:text="Profile"
+        android:textColor="@color/overlay"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:text="FullName : "
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="name"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth : "
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/doBText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/doB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="speciality"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/allerta"
+                android:text="Gender : "
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/genderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/allerta"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="degree"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:text="Father's Name : "
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fnameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="enter phone no. (11 digit)"
+                android:inputType="text"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:text="Mother's Name : "
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mnameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/mname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="enter phone no. (11 digit)"
+                android:inputType="phone"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:text="Child's Address : "
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/addressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="enter phone no. (11 digit)"
+                android:inputType="text"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:text="Phone : "
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="enter phone no. (11 digit)"
+                android:inputType="phone"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:text="Child's Weight :  "
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/weightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="enter email"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="20dp">
+
+        <Button
+            android:id="@+id/saveUpdatedProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorNavigation"
+            android:fontFamily="@font/allerta"
+            android:padding="10dp"
+            android:text="Save Profile"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/cancelUpdating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDiscardButton"
+            android:fontFamily="@font/allerta"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="20dp">
+
+        <Button
+            android:id="@+id/updateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorWarningButton"
+            android:fontFamily="@font/allerta"
+            android:padding="10dp"
+            android:text="Update Profile"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/goBackProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAcceptButton"
+            android:fontFamily="@font/allerta"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

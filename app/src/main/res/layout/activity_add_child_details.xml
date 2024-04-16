@@ -1,215 +1,311 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddChildDetails"
-    >
+    android:background="@color/black_shade_1"
+    tools:context=".AddChildDetails">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Add Child Details"
-            android:textColor="#2CA7E0"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/uploadCertNo"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="195dp"
-            android:background="@drawable/edit"
-            android:drawablePadding="10dp"
-            android:hint="Birth Certificate Number"
-            android:inputType="textPersonName"
-            android:padding="20dp"
-            android:textColorHint="#2CA7E0" />
-
-        <EditText
-            android:id="@+id/uploadFullName"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/edit"
-            android:drawableLeft="@drawable/baseline_person_24"
-            android:drawablePadding="10dp"
-            android:hint="Enter Child's FullName"
-            android:inputType="textPersonName"
-            android:padding="20dp"
-            android:textColorHint="#2CA7E0" />
-
-        <EditText
-            android:id="@+id/uploadDoB"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/edit"
-            android:drawablePadding="10dp"
-            android:hint="Select Child's Date of birth"
-            android:inputType="textPersonName"
-            android:padding="20dp"
-            android:textColorHint="#2CA7E0" />
-
-        <RelativeLayout
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:drawablePadding="10dp"
-            android:id="@+id/RL_gender"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/edit"
-            >
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:id="@+id/imageViewGender"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                />
-
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:textColor="#2CA7E0"
-                android:drawablePadding="10dp"
-                android:id="@+id/textView_register_gender"
-                android:text="Select Your Gender"
-                android:padding="10dp"
-                android:layout_toEndOf="@id/imageViewGender"
-                />
-
-
-            <RadioGroup
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILBirthCert"
+                style="@style/LoginTextInputLayoutStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Birth Certificate Number"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/uploadCertNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textImeMultiLine|textMultiLine"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--edit text for adding a course name-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILFullName"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Enter Full Name"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/uploadFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textImeMultiLine|textMultiLine"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--edit text for adding a course price-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILDoB"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Enter Date of Birth"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/purple_200"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/uploadDoB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="date"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp"
+                    app:boxStrokeColor="@color/purple_200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--edit text for adding a course price-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_register_gender"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/purple_200"
+                app:hintTextColor="@color/white">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:ems="10"
+                    android:gravity="center"
+                    app:boxStrokeColor="@color/purple_200"
+                    android:layout_below="@id/textView_register_gender"
+                    android:id="@+id/uploadGender">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck"
+                        />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Male"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </RadioGroup>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILFatherName"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="@string/child_s_father_s_name"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/uploadFathersName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textImeMultiLine|textMultiLine"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILMotherName"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Child's Mother's Name"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/uploadMothersName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textImeMultiLine|textMultiLine"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILAddress"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Child's Home Address"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/uploadAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textImeMultiLine|textMultiLine"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--edit text for adding a course image link-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILContact"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Enter Contact Information"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/uploadContactInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textImeMultiLine|textMultiLine"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--edit text for adding a course image link-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILWeight"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Input Child's Weight"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/uploadWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textImeMultiLine|textMultiLine"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_toEndOf="@id/imageViewGender"
-                android:layout_below="@id/textView_register_gender"
-                android:id="@+id/uploadGender">
+                android:weightSum="2">
 
-                <RadioButton
-                    android:id="@+id/radio_female"
-                    android:layout_width="wrap_content"
+                <!--button for updating a new course-->
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Female"
-                    android:textColor="#2CA7E0"
-                    android:textSize="16sp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_back"
+                    android:text="Upload Details"
+                    android:textAllCaps="false" />
 
-                <RadioButton
-                    android:id="@+id/radio_male"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Male"
-                    android:textColor="#2CA7E0"
-                    android:textSize="16sp"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </RadioGroup>
-        </RelativeLayout>
 
-        <EditText
-            android:id="@+id/uploadFathersName"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/edit"
-            android:drawablePadding="10dp"
-            android:hint="Child's Father's Name"
-            android:inputType="text"
-            android:padding="20dp"
-            android:textColorHint="#2CA7E0" />
+            </LinearLayout>
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/uploadMothersName"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/edit"
-            android:drawablePadding="10dp"
-            android:hint="Child's Mother's Name"
-            android:inputType="text"
-            android:padding="20dp"
-            android:textColorHint="#2CA7E0" />
-
-        <EditText
-            android:id="@+id/uploadAddress"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/edit"
-            android:drawablePadding="10dp"
-            android:hint="Enter Child's Address"
-            android:inputType="text"
-            android:padding="20dp"
-            android:textColorHint="#2CA7E0" />
-
-        <EditText
-            android:id="@+id/uploadContactInfo"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/edit"
-            android:drawablePadding="10dp"
-            android:hint="Enter Contact Information"
-            android:inputType="text"
-            android:padding="20dp"
-            android:textColorHint="#2CA7E0" />
-
-        <EditText
-            android:id="@+id/uploadWeight"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="35dp"
-            android:background="@drawable/edit"
-            android:drawablePadding="10dp"
-            android:hint="Enter Child's Weight(Kg)"
-            android:inputType="number"
-            android:padding="20dp"
-            android:textColorHint="#2CA7E0" />
-
-        <Button
-            android:id="@+id/saveButton"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Save"
-            android:textAllCaps="false"
-            android:textColor="#fff" />
-
+        <!--progress bar for displaying a loading indicator-->
         <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="?android:attr/progressBarStyleLarge"
-            android:id="@+id/progressBar"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:elevation="10dp"
-            android:visibility="gone"
-            />
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_back"
+            android:visibility="gone" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </ScrollView>

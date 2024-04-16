@@ -77,7 +77,7 @@
                         android:id="@+id/imgVacc"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/baseline_vaccines_24"
+                        app:srcCompat="@drawable/baseline_vaccines_24"
                         />
 
                     <TextView
@@ -116,7 +116,7 @@
                         android:id="@+id/imgInfo"
                         android:layout_width="100dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/information"
+                        app:srcCompat="@drawable/information"
                         />
 
                     <TextView
@@ -155,7 +155,7 @@
                         android:id="@+id/imgSignup"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/refer"
+                        app:srcCompat="@drawable/refer"
                         />
 
                     <TextView
@@ -194,7 +194,7 @@
                         android:id="@+id/imgLocation"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/location"
+                        app:srcCompat="@drawable/location"
                         />
 
                     <TextView
@@ -233,7 +233,7 @@
                         android:id="@+id/imgAppointment"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/doctorconsultation"
+                        app:srcCompat="@drawable/doctorconsultation"
                         />
 
                     <TextView
@@ -272,7 +272,7 @@
                         android:id="@+id/imgFAQ"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/faq"
+                        app:srcCompat="@drawable/faq"
                         />
 
                     <TextView

@@ -22,7 +22,7 @@
             android:layout_gravity="center"
             android:background="@color/colorTransparent"
             android:paddingLeft="20dp"
-            android:src="@drawable/goback" />
+            app:srcCompat="@drawable/goback" />
 
         <TextView
             android:layout_width="match_parent"

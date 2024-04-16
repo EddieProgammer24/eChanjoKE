@@ -42,7 +42,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/doctordefaultimage" />
+                        app:srcCompat="@drawable/doctordefaultimage" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -96,7 +96,7 @@
                             android:layout_height="match_parent"
                             android:paddingTop="3dp"
                             android:paddingRight="3dp"
-                            android:src="@drawable/stethoscope" />
+                            app:srcCompat="@drawable/stethoscope" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -143,7 +143,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/graduate" />
+                        app:srcCompat="@drawable/graduate" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -174,7 +174,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/ic_phone_black_24dp" />
+                        app:srcCompat="@drawable/ic_phone_black_24dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -204,7 +204,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/ic_mail_black_24dp" />
+                        app:srcCompat="@drawable/ic_mail_black_24dp" />
 
                     <TextView
                         android:layout_width="wrap_content"

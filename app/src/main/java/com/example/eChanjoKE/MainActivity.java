@@ -99,12 +99,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        imageHome = findViewById(R.id.imgVacc);
+        imageHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ChildView.class);
+                startActivity(intent);
+            }
+        });
+
         imageSign = findViewById(R.id.imgSignup);
 
         imageSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+
+        imageSign = findViewById(R.id.imgSignup);
+
+        imageSign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ChildView.class);
+                startActivity(intent);
             }
         });
 

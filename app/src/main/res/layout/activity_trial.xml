@@ -7,6 +7,7 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:background="@drawable/loginbackground"
+    tools:context=".TrialActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -45,56 +46,31 @@
             android:orientation="vertical">
 
             <TextView
-                android:textColor="@color/white"
+                android:textColor="@color/colorBlack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/advent_pro_light"
                 android:text="Login"
-                android:textSize="30sp" />
+                android:textSize="32sp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/idTIUserId"
-                style="@style/LoginTextInputLayoutStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:hint="National Provider Identifier(NPI)"
-                android:padding="5dp"
-                android:textColorHint="@color/white"
-                app:hintTextColor="@color/white">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/userID"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:ems="10"
-                    android:importantForAutofill="no"
-                    android:inputType="textImeMultiLine|textMultiLine"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/idTILuserPass"
+                android:id="@+id/idTILBirthCert"
                 style="@style/LoginTextInputLayoutStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Your Password"
+                android:hint="Birth Certificate Number"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/userPass"
+                    android:id="@+id/uploadCertNo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:ems="10"
@@ -104,6 +80,33 @@
                     android:textColorHint="@color/white"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
+
+
+            <EditText
+                android:textColor="@color/colorBlack"
+                android:id="@+id/userID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="id:30***66"
+                android:paddingVertical="10dp" />
+
+            <EditText
+                android:textColor="@color/colorBlack"
+                android:id="@+id/userPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/allerta"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:hint="password"
+                android:paddingVertical="10dp" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -113,6 +116,7 @@
                 android:orientation="vertical"
                 android:paddingVertical="20dp">
 
+
                 <Switch
                     android:id="@+id/rememberMeSwitch"
                     android:layout_width="wrap_content"
@@ -120,11 +124,12 @@
                     android:checked="false"
                     android:fontFamily="@font/allerta"
                     android:text="Remember"
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorformtitleline"
                     android:textOff="Off"
                     android:textOn="On"
                     android:textSize="16sp"
                     tools:ignore="UseSwitchCompatOrMaterialXml" />
+
 
                 <Switch
                     android:id="@+id/adminSwitch"
@@ -133,7 +138,7 @@
                     android:checked="false"
                     android:fontFamily="@font/allerta"
                     android:text="I'm Admin"
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorformtitleline"
                     android:textOff="Off"
                     android:textOn="On"
                     android:textSize="18sp"
@@ -142,24 +147,26 @@
                 <Button
                     android:id="@+id/login"
                     android:layout_width="200dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/button_back"
+                    android:background="@color/colorAcceptButton"
                     android:fontFamily="@font/allerta"
                     android:text="Login"
                     android:textAllCaps="false" />
 
-                <TextView
+                <Button
                     android:id="@+id/loginCancel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorDiscardButton"
+                    android:fontFamily="@font/allerta"
                     android:text="Cancel"
-                    android:textStyle="bold"
-                    android:textColor="@color/red"
-                    android:textAlignment="center"
-                    />
+                    android:textAllCaps="false" />
 
             </LinearLayout>
         </LinearLayout>

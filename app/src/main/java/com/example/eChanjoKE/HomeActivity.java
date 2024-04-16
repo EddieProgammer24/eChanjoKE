@@ -123,53 +123,63 @@ public class HomeActivity extends AppCompatActivity {
             }
         }
     }
-
     public void AllowAccount(final String ID, final String ParentDB) {
-
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
-        RootRef.addValueEventListener(new ValueEventListener() {
+
+        RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
+                if (isFinishing()) {
+                    // If the activity is finishing, don't proceed
+                    return;
+                }
+
                 if (snapshot.child(ParentDB).child(ID).exists()) {
-
                     if (ParentDB.equals("Admin")) {
-                        loadingBar.setMessage("Logging in as Admin...");
-                        loadingBar.setCanceledOnTouchOutside(false);
-                        loadingBar.show();
-                        Intent intent = new Intent(HomeActivity.this, AdminHomeActivity.class);
-                        startActivity(intent);
+                        showProgressDialog("Logging in as Admin...");
+                        startActivity(new Intent(HomeActivity.this, AdminHomeActivity.class));
                     } else if (ParentDB.equals("Doctors")) {
-                        loadingBar.setMessage("Logging in as Doctor...");
-                        loadingBar.setCanceledOnTouchOutside(false);
-                        loadingBar.show();
-                        Intent intent = new Intent(HomeActivity.this, DoctorHomeActivity.class);
-                        startActivity(intent);
+                        showProgressDialog("Logging in as Doctor...");
+                        startActivity(new Intent(HomeActivity.this, DoctorHomeActivity.class));
                     }
-
                 } else {
-
-                    loadingBar.dismiss();
-//                        Toast.makeText(HomeActivity.this, "Password is incorrect", Toast.LENGTH_SHORT).show();
+                    hideProgressDialog(); // Dismiss the loading bar if account not found
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
+                hideProgressDialog(); // Dismiss the loading bar on cancellation
             }
         });
+    }
+
+    private void showProgressDialog(String message) {
+        if (loadingBar == null) {
+            loadingBar = new ProgressDialog(HomeActivity.this);
+        }
+        loadingBar.setMessage(message);
+        loadingBar.setCanceledOnTouchOutside(false);
+        loadingBar.show();
+    }
+
+    private void hideProgressDialog() {
+        if (loadingBar != null && loadingBar.isShowing()) {
+            loadingBar.dismiss();
+        }
     }
 
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Are you sure you want to exit?")
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        HomeActivity.this.finish();
+                        dialog.dismiss();
+                        HomeActivity.super.onBackPressed(); // Call super.onBackPressed() after dismissing the dialog
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -179,6 +189,6 @@ public class HomeActivity extends AppCompatActivity {
                 });
         AlertDialog alert = builder.create();
         alert.show();
-
     }
+
 }

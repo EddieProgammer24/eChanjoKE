@@ -8,5 +8,5 @@
         android:id="@+id/navAdminPage"
         android:enabled="true"
         android:icon="@drawable/admin"
-        android:title="Admin" />
+        android:title="Medic" />
 </menu>

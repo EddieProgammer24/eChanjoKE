@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homeadminbackground"
@@ -36,7 +37,7 @@
             android:background="@color/colorTransparent"
             android:paddingTop="5dp"
             android:paddingRight="20dp"
-            android:src="@drawable/logout" />
+            app:srcCompat="@drawable/logout" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="2dp"
-            android:src="@drawable/adddoctorbutton" />
+            app:srcCompat="@drawable/adddoctorbutton" />
 
         <ImageButton
             android:id="@+id/removedocButton"
@@ -61,7 +62,7 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/shape_homebuttons"
             android:elevation="2dp"
-            android:src="@drawable/removedoctorbutton" />
+            app:srcCompat="@drawable/removedoctorbutton" />
     </LinearLayout>
 
     <LinearLayout
@@ -78,7 +79,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/shape_homebuttons"
             android:elevation="2dp"
-            android:src="@drawable/appointhistorybutton" />
+            app:srcCompat="@drawable/appointhistorybutton" />
 
         <ImageButton
             android:id="@+id/adminreviewButton"
@@ -87,7 +88,7 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/shape_homebuttons"
             android:elevation="2dp"
-            android:src="@drawable/reviewbutton" />
+            app:srcCompat="@drawable/reviewbutton" />
     </LinearLayout>
 
 </LinearLayout>

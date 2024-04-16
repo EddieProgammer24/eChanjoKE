@@ -297,6 +297,16 @@
 
     <string name="menu_add_child">Add Child</string>
     <string name="add_child">Add Child</string>
+    <string name="birth_certificate_number">Birth Certificate Number</string>
+    <string name="enter_full_name">Enter Full Name</string>
+    <string name="enter_date_of_birth">Enter Date of Birth</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="child_s_father_s_name">Child\'s Father\'s Name</string>
+    <string name="child_s_mother_s_name">Child\'s Mother\'s Name</string>
+    <string name="child_s_home_address">Child\'s Home Address</string>
+    <string name="enter_contact_information">Enter Contact Information</string>
+    <string name="upload_details">Upload Details</string>
 
 
 </resources>

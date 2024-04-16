@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,7 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText userID, userPass;
     private Switch adminSwitch;
     private Switch rememberMeSwitch;
-    private Button login, loginCancel;
+    private Button login;
+    private TextView loginCancel;
     private String parentDbName = "Doctors";
     private ProgressDialog loadingBar;
 
@@ -65,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 userID.setText(null);
                 userPass.setText(null);
+
             }
         });
 

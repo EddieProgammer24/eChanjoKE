@@ -133,7 +133,7 @@ public class DoctorsListAdapter extends RecyclerView.Adapter<DoctorsListAdapter.
                     }
                 }
             });
-/*
+
             getAppointment.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -150,7 +150,6 @@ public class DoctorsListAdapter extends RecyclerView.Adapter<DoctorsListAdapter.
                 }
             });
 
- */
         }
     }
 }

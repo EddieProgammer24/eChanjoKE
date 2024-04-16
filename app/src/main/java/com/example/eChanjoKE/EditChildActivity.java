@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,7 +27,7 @@ public class EditChildActivity extends AppCompatActivity {
     //creating variables for our edit text, firebase database
     // database reference, course rv modal, progress bar.
 
-    private TextInputEditText cerNumberEdt,fullNameEdt,doBEdt,genderEdt,fatherNameEdt,motherNameEdt,addressEdt,weightEdt;
+    private TextInputEditText cerNumberEdt,fullNameEdt,doBEdt,genderEdt,fatherNameEdt,motherNameEdt,addressEdt,contactEdt,weightEdt;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     ChildDetails childDetails;
@@ -46,6 +48,7 @@ public class EditChildActivity extends AppCompatActivity {
         fatherNameEdt = findViewById(R.id.idEdtFatherName);
         motherNameEdt = findViewById(R.id.idEdtMotherName);
         addressEdt = findViewById(R.id.idEdtAddress);
+        contactEdt = findViewById(R.id.idEdtContact);
         weightEdt = findViewById(R.id.idEdtWeight);
         loadingPB = findViewById(R.id.idPBLoading);
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -61,6 +64,7 @@ public class EditChildActivity extends AppCompatActivity {
             fatherNameEdt.setText(childDetails.getFathersName());
             motherNameEdt.setText(childDetails.getMothersName());
             addressEdt.setText(childDetails.getAddress());
+            contactEdt.setText(childDetails.getContact());
             weightEdt.setText(childDetails.getWeight());
             childId = childDetails.getChildId();
         }
@@ -83,20 +87,10 @@ public class EditChildActivity extends AppCompatActivity {
                 String fathersName = fatherNameEdt.getText().toString();
                 String mothersName = motherNameEdt.getText().toString();
                 String address = addressEdt.getText().toString();
+                String contact = contactEdt.getText().toString();
                 String weight = weightEdt.getText().toString();
 
-                //on below line we are creating a map for
-                //passing data using key and value pair.
-                Map<String, Object> map = new HashMap<>();
-                map.put("certNo",certNo);
-                map.put("fullname",fullname);
-                map.put("doB",doB);
-                map.put("gender",gender);
-                map.put("fathersName",fathersName);
-                map.put("mothersName",mothersName);
-                map.put("address",address);
-                map.put("weight",weight);
-                map.put("childId",childId);
+                ChildDetails childDetails = new ChildDetails(childId,certNo,fullname, doB, gender,fathersName,mothersName,address,contact,weight);
 
                 //on below line we are calling a database reference on
                 //add value event listener and on data change
@@ -105,18 +99,18 @@ public class EditChildActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         //making progressbar visibility as gone
                         loadingPB.setVisibility(View.GONE);
-                        //adding a map to our database
-                        databaseReference.updateChildren(map);
                         //on below line we are displaying a toast message
                         Toast.makeText(EditChildActivity.this, "Child Details Updated..", Toast.LENGTH_SHORT).show();
                         //opening a new activity after updating the child details
                         startActivity(new Intent(EditChildActivity.this,ChildView.class));
+                        finish();; // Finish current activity
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         //displaying a failure message on Toast
                         Toast.makeText(EditChildActivity.this, "Failed to update child details..", Toast.LENGTH_SHORT).show();
+                        finish();
                     }
                 });
             }
@@ -134,9 +128,21 @@ public class EditChildActivity extends AppCompatActivity {
     }
 
     private void deleteChild() {
-        //on line below calling a method to delete the child details
-        databaseReference.removeValue();
-        //opening the child view activity on below line
-        startActivity(new Intent(EditChildActivity.this,ChildView.class));
+        databaseReference.removeValue()
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(EditChildActivity.this, "Child Deleted", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(EditChildActivity.this, ChildView.class));
+                        finish(); // Finish current activity
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(EditChildActivity.this, "Failed to delete child", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
+
 }

@@ -1,12 +1,5 @@
 package com.example.eChanjoKE;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,9 +11,18 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.core.view.MenuItemCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.eChanjoKE.frontend.Activity_AlarmsList;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -53,7 +55,7 @@ public class ChildView extends AppCompatActivity implements ChildDetailsAdapter.
         } else if (item.getItemId() == R.id.bottom_vaccine) {
             intent = new Intent(getApplicationContext(), ChildView.class);
         } else if (item.getItemId() == R.id.bottom_reminders) {
-            intent = new Intent(getApplicationContext(), VaccineSchedule.class);
+            intent = new Intent(getApplicationContext(), Activity_AlarmsList.class);
         }
 
         if (intent != null) {
@@ -107,7 +109,7 @@ public class ChildView extends AppCompatActivity implements ChildDetailsAdapter.
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_child_view, menu);
         MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

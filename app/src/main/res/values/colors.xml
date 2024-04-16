@@ -39,9 +39,9 @@
     <color name="dark_blue_shade_2">#17388E</color>
     <color name="light_blue_shade">#12B2E6</color>
 
-    <color name="colorPrimary">#00796b</color>
+    <color name="colorAccent">#00796b</color>
     <color name="colorPrimaryDark">#00695C</color>
-    <color name="colorAccent">#FF4081</color>>
+    <color name="colorPrimary">#FF4081</color>>
     <color name="colorOnPrimary">#000000</color>
 
     <color name="colorBackgroundFragment">#F1EEEE</color>

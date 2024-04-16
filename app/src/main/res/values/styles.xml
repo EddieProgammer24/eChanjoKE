@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/new_purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorSurface">@color/surface</item>
+
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+
+    </style>
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+    </style>
+
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#296D98</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 
     <style name="transparentButtonStyle">
@@ -62,31 +102,5 @@
         <item name="windowActionBarOverlay">false</item>
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
-
-    <style name="roundedImageViewRounded">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
-    </style>
-
-    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
-    </style>
-
-    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@android:color/transparent</item>
-    </style>
-
-    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
-        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
-        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
-    </style>
-
-
-    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <item name="boxStrokeColor">#296D98</item>
-        <item name="boxStrokeWidth">1dp</item>
-    </style>
-
-
 
 </resources>
