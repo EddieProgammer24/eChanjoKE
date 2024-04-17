@@ -307,6 +307,8 @@
     <string name="child_s_home_address">Child\'s Home Address</string>
     <string name="enter_contact_information">Enter Contact Information</string>
     <string name="upload_details">Upload Details</string>
+    <string name="click_to_reset">Click to Reset</string>
+    <string name="click_here_to_reset">Click Here To Reset</string>
 
 
 </resources>

@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="80dp"
         android:id="@+id/logo"
-        android:src="@drawable/child"
+        android:src="@drawable/child_bc"
         android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"/>
 

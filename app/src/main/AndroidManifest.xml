@@ -43,6 +43,39 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".ParentDeleteProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ParentChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".ParentUpdateEmail"
+            android:exported="false" />
+        <activity
+            android:name=".ParentUpdateProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ParentUploadPicture"
+            android:exported="false" />
+        <activity
+            android:name=".ParentProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParentForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ParentRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParentMainLogin"
+            android:exported="false" />
+        <activity
+            android:name=".ParentLogin"
+            android:exported="false" />
+        <activity
             android:name=".ChildProfileActivity"
             android:exported="false" />
         <activity

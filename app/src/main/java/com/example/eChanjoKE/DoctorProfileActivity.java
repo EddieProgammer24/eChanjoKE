@@ -204,7 +204,6 @@ public class DoctorProfileActivity extends AppCompatActivity {
         cancelUpdating.setVisibility(View.GONE);
     }
 
-
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -212,16 +211,18 @@ public class DoctorProfileActivity extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        // Finish the activity only when the user clicks "Yes"
                         DoctorProfileActivity.this.finish();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        // Dismiss the dialog without finishing the activity
                         dialog.cancel();
                     }
                 });
         AlertDialog alert = builder.create();
         alert.show();
-        finish();
     }
+
 }

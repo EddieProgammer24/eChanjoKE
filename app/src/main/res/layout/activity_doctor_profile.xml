@@ -4,6 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/imageView_profile_dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/doctor" />
+
     <TextView
         android:id="@+id/showProfileName"
         android:layout_width="wrap_content"
@@ -20,6 +29,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:padding="20dp">
 
         <LinearLayout
@@ -28,25 +39,25 @@
             android:layout_marginTop="15dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/allerta"
-                android:text="Name : "
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_profile"
+                android:background="@drawable/ic_profile"
+                />
 
             <TextView
                 android:id="@+id/nameText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/allerta"
                 android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="name"
@@ -60,18 +71,19 @@
             android:orientation="horizontal"
             android:paddingTop="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Speciality : "
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_speciality"
+                android:background="@drawable/speciality"
+                android:layout_marginTop="20dp"
+                />
 
             <TextView
                 android:id="@+id/specialityText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/allerta"
                 android:textSize="18sp" />
 
@@ -91,20 +103,19 @@
             android:orientation="horizontal"
             android:paddingTop="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/allerta"
-                android:text="Degree : "
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_degree"
+                android:background="@drawable/degree"
+                android:layout_marginTop="20dp"
+                />
 
             <TextView
                 android:id="@+id/degreeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/allerta"
                 android:textSize="18sp" />
@@ -124,19 +135,19 @@
             android:orientation="horizontal"
             android:paddingTop="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/allerta"
-                android:text="Phone : "
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_phone"
+                android:background="@drawable/ic_phone_black_24dp"
+                android:layout_marginTop="20dp"
+                />
 
             <TextView
                 android:id="@+id/phoneText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/allerta"
                 android:textSize="18sp" />
 
@@ -146,6 +157,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="enter phone no. (11 digit)"
+                android:layout_marginLeft="20dp"
                 android:inputType="phone"
                 android:visibility="gone" />
 
@@ -157,19 +169,19 @@
             android:orientation="horizontal"
             android:paddingTop="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/allerta"
-                android:text="Email :  "
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_email"
+                android:background="@drawable/baseline_email_24"
+                android:layout_marginTop="20dp"
+                />
 
             <TextView
                 android:id="@+id/emailText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/allerta"
                 android:textSize="18sp" />
 
@@ -189,19 +201,19 @@
             android:orientation="horizontal"
             android:paddingTop="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/allerta"
-                android:text="Password :  "
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_password"
+                android:background="@drawable/baseline_lock_24"
+                android:layout_marginTop="20dp"
+                />
 
             <TextView
                 android:id="@+id/passText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/allerta"
                 android:textSize="18sp" />
 
@@ -264,7 +276,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="@color/colorWarningButton"
+            android:background="@drawable/button_back"
             android:fontFamily="@font/allerta"
             android:padding="10dp"
             android:text="Update Profile"
@@ -275,12 +287,13 @@
             android:id="@+id/goBackProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAcceptButton"
+            android:background="@drawable/button_back"
             android:fontFamily="@font/allerta"
             android:text="Back"
             android:textAllCaps="false"
             android:textSize="16sp" />
 
     </LinearLayout>
+
 
 </LinearLayout>
